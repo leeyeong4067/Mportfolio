@@ -16,15 +16,20 @@
 
 <br>
 
-## 디렉토리 구조
-
-<p align="justify">
-
-  + **img**: MD 및 웹사이트의 이미지 파일이 들어있습니다.
-  + **css**: css 파일이 들어있습니다.
-  + **js**: js 파일이 들어있습니다.
-</p>
-
+## jquery mobile css 사용
+```html
+<div data-role="page">
+    <div data-role="panel">
+    </div>
+    <div data-role="header">
+    </div>
+    <div data-role="content">
+    </div>
+    <div data-role="footer">
+    </div>
+</div>
+```
+모든 부분에 jquery mobile 사용
 
 <br>
 
