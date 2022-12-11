@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 포트폴리오</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/jquery.mobile-1.4.5.css">
+    <script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.js"></script>
+
+</head>
+<body>
+    <section id="home" data-role="page">
+        <header data-role="header"><h1>Juyeong's Portfolio</h1></header>                   
+        <div class="content" data-role="content">
+            <section id="my_info">
+                <h2>내 정보</h2> 
+                <img src="img/profile.jpg" alt="profile" />
+                <table>
+                    <tbody>
+                        <tr id="myname">
+                            <th>이름</th>
+                            <td>이주영</td>
+                        </tr>
+                        <tr>
+                            <th>직업</th>
+                            <td>학생</td>
+                        </tr>
+                        <tr>
+                            <th>나이</th>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th>거주지</th>
+                            <td>부산</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+                
+            <section id=""about>
+                <h2>정보</h2>
+                <p>안녕하세요 동의과학대학교에 재학중인 이주영입니다.</p>   
+            </section>
+            
+            <section id="contact">
+                <h2>연락처</h2>
+                <ul>
+                    <li>
+                        <img src="img/ico_email.png">&nbsp;leeyeong4067@naver.com
+                    </li>
+                </ul>  
+            </section>
+        </div>
+        <footer data-role="footer">
+            <div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#project">Project</a></li>
+				</ul>
+			</div>
+        </footer>
+    </section>
+
+    <div data-role="page" id="skills">
+		<div data-role="header">
+			<h1>skills</h1>
+		</div>
+
+		<div data-role="content" >
+			<section id="skill">
+                <h2>Skills</h2>
+                <div id="container" style="height: 400px"></div>
+      
+                <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+                <script type="text/javascript">
+                var dom = document.getElementById('container');
+                var myChart = echarts.init(dom, null, {
+                    renderer: 'canvas',
+                    useDirtyRect: false
+                });
+                var app = {};
+                
+                var option;
+            
+                option = {
+                xAxis: {
+                type: 'category',
+                data: ['HTML', 'CSS', 'JAVA', 'JS', 'Python']
+                },
+                yAxis: {
+                type: 'value'
+                },
+                series: [
+                {
+                    data: [70, 50, 80, 70, 60],
+                    type: 'bar',
+                    showBackground: true,
+                    backgroundStyle: {
+                    color: 'rgba(180, 180, 180, 0.2)'
+                    }
+                }
+                ]
+            };
+            
+                if (option && typeof option === 'object') {
+                    myChart.setOption(option);
+                }
+            
+                window.addEventListener('resize', myChart.resize);
+                </script>
+            </section>
+		</div>		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#project">Project</a></li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+
+    <div data-role="page" id="project">
+		<div data-role="header">
+			<h1>projects</h1>
+		</div>
+
+		<div data-role="content" >
+			<section id="project">
+                <h2>projects</h2>
+                <div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+                    <div data-role="collapsible" data-collapsed="false">
+                        <h3>편의점 재고 관리 프로그램</h3>
+                        <p><img src="img/cv.png"></p>
+                        <a href="https://github.com/leeyeong4067/JavaProject" target="_blank">Check</a>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>온라인 북스토어 사이트</h3>
+                        <p><img src="img/bs.png"></p>
+                        <a href="https://github.com/leeyeong4067/Web-Project" target="_blank">Check</a>
+                    </div>
+                    <div data-role="collapsible" >
+                        <h3>일정 관리 어플</h3>
+                        <p><img src="img/sc.png"></p>
+                        <a href="https://github.com/leeyeong4067/JavaProject" target="_blank">Check</a>
+                    </div>
+                </div>
+            </section>
+		</div>		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#project">Project</a></li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+    
+</body>
+</html>
